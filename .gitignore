@@ -1,0 +1,5 @@
+.DS_Store
+assets/ids.txt
+*.0*.js
+*.0*.ino
+config.h
