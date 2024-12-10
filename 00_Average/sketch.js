@@ -26,10 +26,10 @@ function setup() {
 function draw() {
   background(cBackgroundColor);
 
-  if (mSerial.opened() && mSerial.availableBytes() > 0) {
+  if (mSerial.opened() && mSerial.availableBytes() > 0) { // if serial is open and there a bytes to read
     let mLine = mSerial.readUntil("\n");
     let sensorVal = int(mLine);
     print(mLine, sensorVal);
-    cBackgroundColor = map(sensorVal, 0, 2000, 0, 255, true);
+    cBackgroundColor = map(sensorVal, 0, 2000, 0, 255, true); // change the bg color according to the bytes read
   }
 }
