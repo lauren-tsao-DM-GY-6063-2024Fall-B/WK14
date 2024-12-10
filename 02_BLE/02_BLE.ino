@@ -3,9 +3,9 @@
 #include "EasyBLE.h"
 
 String DEVICE_NAME("LDR");
-String SERVICE_UUID("250b0d00-1b4f-4f16-9171-f63c733d8114");
+String SERVICE_UUID("250b0d00-1b4f-4f16-9171-f63c733d2850"); // address that the UID (unique universal identifier) uses. (change the last 4 or 3 numbers if you want to run it, maybe something related to the NYU ID)
 
-EasyBLE mBLE;
+EasyBLE mBLE; // from the library
 
 int a0Val = 0;
 int a0Min = 5000;
@@ -30,7 +30,7 @@ void setup() {
   Serial.begin(9600);
   while (!Serial) {}
 
-  mBLE.setup(DEVICE_NAME, SERVICE_UUID);
+  mBLE.setup(DEVICE_NAME, SERVICE_UUID); // send everything over as a json string
 }
 
 void loop() {
@@ -41,3 +41,6 @@ void loop() {
   updateData();
   delay(2);
 }
+
+// MAKE SURE THE SERVICE_UUID NUMBER IS THE SAME AS THE ONE ON THE P5JS FILE
+// if the bluetooth doesn't work, try to change the baba at the end of the final line in the EasyBLE.h

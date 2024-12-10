@@ -35,4 +35,4 @@ private:
 };
 
 BLECharacteristic* EasyBLE::pCharacteristic;
-String EasyBLE::CHARACTERISTIC_UUID("250b0d01-1b4f-4f16-9171-f63c733dbeef");
+String EasyBLE::CHARACTERISTIC_UUID("250b0d01-1b4f-4f16-9171-f63c733dbaba");
